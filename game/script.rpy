@@ -54,9 +54,41 @@ label start:
     show detective
     menu:
         "What should we do now?"
-        "Yes, solve this case tomorrow":
-            jump living
 
         "No, solve this case now":
             jump living
+
+label living:
+    "The next day I woke up and went to the apartment of the victim."
+    "I found that there were 2 suspects, the cook and the husband."
+
+    show chef
+    show man
+    menu: 
+        "Who should we interrogate first?":
+        "The cook":
+            jump cook
+        "The husband":
+            jump man
+
+
+label cook:
+    show cook
+
+    menu: 
+        "What should we ask the cook?":
+            "Where were you last night?"
+                "I was at home, I was cooking dinner for sir and mam."
+
+            "Did you have any arguments with the victime?":
+                "No, I have been working for them for more thn 5 years, we had no problems at all."
+    return
+
+label man:
+    show man
+
+    menu:
+        "What should we ask the husband?":
+            "Where were you last night?"
+                "I was at my office"
 return
