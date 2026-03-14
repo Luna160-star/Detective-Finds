@@ -3,32 +3,60 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+default progression_points = 0
+    # choose character colours
+
+define a = Character("Detective")
+define b = Character("Cook")
+define c = Character ("Husband")
 
 
-# The game starts here.
+
+image 1:
+    "images/1.jpg"
+    zoom 1
+
+image 2:
+    "images/2.jpg"
+    zoom 1
+
+image tove:
+    "images/tove.jpg"
+    zoom 1
+
+image living:
+    "images/living.jpg"
+    zoom 1
+
+image chef:
+    "images/chef.png"
+    zoom 1
+
+image detective:
+    "images/detective.png"
+    zoom 1
+
+image man:
+    "images/man.png"
+    zoom 1
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    scene 1
+    "Hi, Help me solve this case, I am a detective and I need your help!"
 
-    scene bg room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    
+    scene 2
+    "Oh, another case, I wonder what this is about"
+    "It's already very late, I will work on this case tomorrow."
+   
+    show detective
+    menu:
+        "What should we do now?"
+        "Yes, solve this case tomorrow":
+            jump living
 
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "This is for trying, see if it works!"
-
-    e "Check commit if its working properly or not!"
-    # This ends the game.
-
-    return
+        "No, solve this case now":
+            jump living
+return

@@ -1,3 +1,9 @@
 {
-    "renpyWarp.sdkPath": "c:/Users/Aasish.ranjan/AppData/Roaming/Code/User/globalStorage/paisleysoftworks.renpywarp/file-downloader-downloads/8.5.2"
+    "renpyWarp.sdkPath": "c:/Users/Aasish.ranjan/AppData/Roaming/Code/User/globalStorage/paisleysoftworks.renpywarp/file-downloader-downloads/8.5.2",
+    "files.exclude": {
+        "**/*.rpyc": true,
+        "**/*.rpa": true,
+        "**/*.rpymc": true,
+        "**/cache/": true
+    }
 }
