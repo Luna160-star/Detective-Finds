@@ -27,6 +27,8 @@ label start:
     e "You've created a new Ren'Py game."
 
     e "This is for trying, see if it works!"
+
+    e "Check commit if its working properly or not!"
     # This ends the game.
 
     return
